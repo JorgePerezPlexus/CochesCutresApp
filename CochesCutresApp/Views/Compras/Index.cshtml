@@ -1,0 +1,73 @@
+﻿@model IEnumerable<CochesCutresApp.Models.Compras>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lista de Ventas/Compras</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Crear Nueva", "Create")
+        @using (Html.BeginForm("Index", "Search", FormMethod.Get))
+        {
+            <input type="text" name="search" placeholder="Busca por cliente"/>
+            <input type="submit" name="submit" value="search"/>
+        }
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Clientes.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empleados.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoCompraVenta.TipoCompraVenta1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vehiculos.Marca)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fecha)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Clientes.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empleados.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoCompraVenta.TipoCompraVenta1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vehiculos.Marca)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id=item.CompraId }) |
+                @Html.ActionLink("Detailles", "Details", new { id=item.CompraId }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id=item.CompraId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

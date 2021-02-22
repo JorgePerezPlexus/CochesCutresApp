@@ -1,0 +1,87 @@
+﻿@model CochesCutresApp.Models.Vehiculos
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Vehiculos</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Marca)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Marca)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Modelo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Puertas)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Puertas)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Color)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Color)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MesesGarantia)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MesesGarantia)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Stock)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Stock)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Foto)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Foto)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoVehiculos.Tipo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TipoVehiculos.Tipo)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.VehiculoId }) |
+        @Html.ActionLink("Volver", "Index")
+    </p>
+</body>
+</html>

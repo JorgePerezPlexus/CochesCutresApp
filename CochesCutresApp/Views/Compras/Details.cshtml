@@ -1,0 +1,70 @@
+﻿@model CochesCutresApp.Models.Compras
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detalles</title>
+</head>
+<body>
+    <div>
+        <h4>Compras</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Fecha)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Precio)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Precio)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Clientes.NIF)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Clientes.NIF)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Empleados.NIF)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Empleados.NIF)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.TipoCompraVenta.TipoCompraVenta1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.TipoCompraVenta.TipoCompraVenta1)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Vehiculos.Marca)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Vehiculos.Marca)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Editar", "Edit", new { id = Model.CompraId }) |
+        @Html.ActionLink("Volver", "Index")
+    </p>
+</body>
+</html>
